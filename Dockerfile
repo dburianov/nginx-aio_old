@@ -21,10 +21,10 @@ RUN apt-get -yqq update \
     && apt-get install -y --no-install-recommends --no-install-suggests \  
     git unzip libxml2-dev \	
     libbz2-dev libcurl4-openssl-dev libmcrypt-dev libmhash2 \
-	libmhash-dev libpcre3 libpcre3-dev make build-essential \
-	libxslt1-dev libgeoip-dev \
-	libpam-dev libgoogle-perftools-dev lua5.1 liblua5.1-0 \
-	liblua5.1-0-dev checkinstall wget libssl-dev \
+    libmhash-dev libpcre3 libpcre3-dev make build-essential \
+    libxslt1-dev libgeoip-dev \
+    libpam-dev libgoogle-perftools-dev lua5.1 liblua5.1-0 \
+    liblua5.1-0-dev checkinstall wget libssl-dev \
     mercurial meld openssh-server \
     autoconf automake cmake libass-dev libfreetype6-dev \
     libsdl2-dev libtheora-dev libtool libva-dev libvdpau-dev \
@@ -107,21 +107,21 @@ RUN echo "Compiling Nginx" \
     --with-http_ssl_module \
     --with-http_mp4_module \
     --with-http_flv_module \
-	  --with-http_secure_link_module \
+    --with-http_secure_link_module \
     --with-http_dav_module \
     --with-http_auth_request_module \
     --with-compat \
-	  --with-http_geoip_module \
+    --with-http_geoip_module \
     --with-http_image_filter_module \
-	  --with-mail \
+    --with-mail \
     --with-mail_ssl_module \
     --with-google_perftools_module \
-	  --with-debug \
+    --with-debug \
     --with-pcre-jit \
     --with-ipv6 \
     --with-http_stub_status_module \
     --with-http_realip_module \
-	  --with-http_addition_module \
+    --with-http_addition_module \
     --with-http_gzip_static_module \
     --with-http_sub_module \
     --with-stream \
@@ -133,11 +133,11 @@ RUN echo "Compiling Nginx" \
     --with-http_gunzip_module \
     --with-http_v2_module \
     --with-http_slice_module \
-	  --add-module=/usr/src/nginx-rtmp-module \
-	  --add-module=/usr/src/ngx_devel_kit \
-	  --add-module=/usr/src/lua-nginx-module \
-	  --add-module=/usr/src/echo-nginx-module \
-	  --add-module=/usr/src/nginx-ts-module \
+    --add-module=/usr/src/nginx-rtmp-module \
+    --add-module=/usr/src/ngx_devel_kit \
+    --add-module=/usr/src/lua-nginx-module \
+    --add-module=/usr/src/echo-nginx-module \
+    --add-module=/usr/src/nginx-ts-module \
     --add-module=/usr/src/nginx-module-vts \
     --add-module=/usr/src/nginx-module-stream-sts \
     --add-module=/usr/src/nginx-module-sts \
