@@ -168,11 +168,11 @@ FROM ubuntu_core AS nginx-release
 LABEL maintainer="Dmytro Burianov <dmytro@burianov.net>"
 
 COPY --from=nginx-build /usr/local /usr/local/
-COPY run.sh run.sh
+RUN chmod +x /run.sh
 
-EXPOSE 80
-EXPOSE 1935
-EXPOSE 443
+EXPOSE 80/tcp
+EXPOSE 1935/tcp
+EXPOSE 443/tcp
 
 VOLUME ["/usr/local/nginx/conf", "/usr/local/nginx/html", "/usr/local/nginx/lua", "/usr/local/nginx/logs", "/usr/local/nginx/cache"]
 
@@ -180,4 +180,4 @@ RUN ldconfig /usr/local/lib
 
 RUN PATH=$PATH:/usr/local/nginx/sbin
 
-CMD ./run.sh
+CMD /run.sh
